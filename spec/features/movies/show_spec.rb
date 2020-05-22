@@ -45,10 +45,11 @@ RSpec.describe "Movie Show Page", type: :feature do
     expect(page).to_not have_content(actor4.name)
 
     fill_in  :actor_name, with: "#{actor4.name}"
-    click "Submit"
+    click_button "Submit"
 
     expect(current_path).to eq("/studios/#{movie1.id}")
     expect(page).to have_content(actor4.name)
+  end
 end
 
 
