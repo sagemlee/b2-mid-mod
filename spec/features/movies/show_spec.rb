@@ -5,7 +5,7 @@ RSpec.describe "Movie Show Page", type: :feature do
     disney = Studio.create!(name: "Disney", location: "Los Angeles")
     movie1 = disney.movies.create!(title: "Movie 1", creation_year: 2011, genre: "horror")
 
-    actor1= Actor.create!(name: "Lucy", age:12)
+    actor1= Actor.create!(name: "Lucy", age:10)
     actor2= Actor.create!(name: "Chris", age:30)
     actor3= Actor.create!(name: "John", age:50)
 
@@ -18,8 +18,12 @@ RSpec.describe "Movie Show Page", type: :feature do
     expect(page).to have_content(movie1.title)
     expect(page).to have_content(movie1.creation_year)
     expect(page).to have_content(movie1.genre)
-    expect(page).to have_content(movie1.title)
-    
+
+    expect(page).to have_content("Average Age of Actors: 30")
+    expect(page).to have_content(actor1.name)
+    expect(page).to have_content(actor2.name)
+    expect(page).to have_content(actor3.name)
+
 
   end
 end
