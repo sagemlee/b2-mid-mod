@@ -9,6 +9,9 @@ RSpec.describe "Movie Show Page", type: :feature do
     actor2= Actor.create!(name: "Chris", age:30)
     actor3= Actor.create!(name: "John", age:50)
 
+    MovieActor.create!(actor: actor1, movie: movie1)
+    MovieActor.create!(actor: actor2, movie: movie1)
+    MovieActor.create!(actor: actor3, movie: movie1)
 
     visit "/studios/#{movie1.id}"
 
@@ -16,7 +19,7 @@ RSpec.describe "Movie Show Page", type: :feature do
     expect(page).to have_content(movie1.creation_year)
     expect(page).to have_content(movie1.genre)
     expect(page).to have_content(movie1.title)
-    end
+    
 
   end
 end
