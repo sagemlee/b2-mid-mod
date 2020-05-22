@@ -23,8 +23,6 @@ RSpec.describe "Movie Show Page", type: :feature do
     expect(page).to have_content(actor1.name)
     expect(page).to have_content(actor2.name)
     expect(page).to have_content(actor3.name)
-
-
   end
 end
 
