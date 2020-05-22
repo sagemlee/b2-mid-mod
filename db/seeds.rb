@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+disney = Studio.create!(name: "Disney", location: "Los Angeles")
+warnerbros = Studio.create!(name: "Warner Brothers", location: "Southern California")
+pixar = Studio.create!(name: "Pixar", location: "Studio City")
