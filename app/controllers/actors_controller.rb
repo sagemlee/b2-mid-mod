@@ -6,4 +6,8 @@ class ActorsController < ApplicationController
     MovieActor.create!(actor: actor, movie: @movie)
     redirect_to "/studios/#{@movie.id}"
   end
+
+  def show
+    @actor = Actor.find(params[:actor_id])
+  end 
 end

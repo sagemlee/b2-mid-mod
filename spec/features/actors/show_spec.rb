@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "Studio index page", type: :feature do
-  it "displays actor, and list of actors they have worked with" do
+  xit "displays actor, and list of actors they have worked with" do
     disney = Studio.create!(name: "Disney", location: "Los Angeles")
     warnerbros = Studio.create!(name: "Warner Brothers", location: "Southern California")
 

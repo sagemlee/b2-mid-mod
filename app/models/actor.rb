@@ -9,4 +9,8 @@ class Actor < ApplicationRecord
   def self.young_to_old
     Actor.order(:age)
   end
+
+  def coworkers
+    movies.all_actors
+  end 
 end

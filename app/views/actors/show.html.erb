@@ -1,0 +1,6 @@
+<h1><%@actor.name%></h1>
+
+<h2>Actors <%@actor.name%> has worked with:</h2>
+<%@actor.coworkers.each do |coworker| %>
+<p><%coworker.name%></p>
+<% end  %>
